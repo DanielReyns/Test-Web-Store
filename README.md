@@ -1,2 +1,2 @@
 # Test-Web-Store
-Test Webstore for Ingico Connect
+Test Webstore for Ingenico Connect
