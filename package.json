@@ -1,0 +1,13 @@
+{
+  "name": "storeapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "connect-sdk-nodejs": "^2.1.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0"
+  }
+}

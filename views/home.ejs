@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include partials/head.ejs %>
+</head>
+<body>
+	<h1 align="Center">Welcome to the <%= title %></h1>
+	<BR>
+	<BR>
+	<div class="container">
+		<% for (var i = 0; i < cards.length; i++) { %>
+			<% if((i % 3) == 0) { %>
+			<% boodivneed = 1 %>
+			<div class="row">
+			<% } %>
+				<div class="col-md-4">
+					<TABLE align="center">
+					<TR><TD align="center"><H4><%= cards[i].Name %></H4></TD></TR>
+					<TR><TD align="center"><img src="<%= cards[i].ImageURL %>" class="img-responsive"></TD></TR>
+					<TR><TD align="center">
+					<form method="get" action="\card\<%= cards[i].ID %>">
+						<input type='submit' value='Buy now'>
+					</form>
+					</TR></TD>
+					</TABLE>
+				</div>
+			<% if(((i + 1) % 3) == 0) { %> 
+			</div> 
+			<% boodivneed = 0 %>
+			<% } %>
+		<% } %>
+		<% if(boodivneed) { %>
+			</div>
+		<% } %>
+	</div>
+	
+	<% include partials/scripts.ejs %>
+
+</body>
+</html>
