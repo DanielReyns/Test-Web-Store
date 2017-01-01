@@ -1,0 +1,7 @@
+{
+  "name":"appstore",
+  "description":"Test Webstore for Ingenico Connect",
+  "repository":"https://github.com/heroku/Test-Web-Store",
+  "logo":"http://node-js-sample.herokuapp.com/node/svg",
+  "image":"heroku/nodejs"
+}
