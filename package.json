@@ -9,5 +9,12 @@
     "connect-sdk-nodejs": "^2.1.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0"
-  }
+  },
+  "engines":{
+    "node": *
+  },
+  "repository": {
+    "type: git",
+    "url" : "https://github.com/DanielReyns/Test-Web-store"
+  } 
 }
