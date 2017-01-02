@@ -29,18 +29,19 @@ exports.home = function(req, res) {
 
 // Card Single
 exports.cardsingle = function(req, res) {
-	//var card_id = req.params.card_id;
-	//res.send("This is the page for card number " + card_id);
+	var card_id = req.params.card_id;
+	res.send("This is the page for card number " + card_id);
+	/*
 	var body = {
   			"hostedCheckoutSpecificInput": {"locale": "en_GB","variant": "101"}, 
-  			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": 1500}, 
+			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": 1500}, 
     		"customer": {"billingAddress": {"countryCode": "BE"}
     		}
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
            render(res, error, sdkResponse);
-	});
+	});*/
 };
 
 // notFound
