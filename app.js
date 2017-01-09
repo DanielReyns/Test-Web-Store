@@ -20,7 +20,7 @@ connectSdk.init({
   enableLogging: true, // defaults to false
   //logger: logger, // if undefined console.log will be used
   apiKeyId: 'f76d4db20b15c030',
-  secretApiKey: 'B5rSIQn/rdpwYy8QmVTZ3d78rFq0Hecbnrc/DkwaUXE='
+  secretApiKey: 'B5rSIQn/rdpwYy8QmVTZ3d78rFq0Hecbnrc/DkwaUXE=' 
 });
 
 //Routes
