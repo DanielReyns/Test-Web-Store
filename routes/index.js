@@ -40,7 +40,7 @@ exports.cardsingle = function(req, res) {
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-           //render(res, error, sdkResponse);
+           res.render(res, error, sdkResponse);
 	});
 };
 
