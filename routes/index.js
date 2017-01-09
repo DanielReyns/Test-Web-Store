@@ -1,6 +1,6 @@
 var connectSdk = require('connect-sdk-nodejs');
 
-var hostname = 'https://damp-brushlands-82490.herokuapp.com/';
+var hostname = 'damp-brushlands-82490.herokuapp.com';
 var portnumber = process.env.PORT || 8080;
 
 connectSdk.init({
