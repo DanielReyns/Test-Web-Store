@@ -18,7 +18,7 @@
 					<TR><TD align="center"><H4><%= cards[i].Name %></H4></TD></TR>
 					<TR><TD align="center"><img src="<%= cards[i].ImageURL %>" class="img-responsive"></TD></TR>
 					<TR><TD align="center">
-					<form method="get" action="\card\<%= cards[i].ID %>">
+					<form method="get" action="/card/<%= cards[i].ID %>">
 						<input type='submit' value='Buy now'>
 					</form>
 					</TR></TD>
