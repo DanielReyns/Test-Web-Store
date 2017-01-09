@@ -34,14 +34,13 @@ exports.cardsingle = function(req, res) {
 	
 	var body = {
   			"hostedCheckoutSpecificInput": {"locale": "en_GB","variant": "101"}, 
-			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": 1500}, 
-    		"customer": {"billingAddress": {"countryCode": "BE"}
+			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": "1500"}, 
+    		        "customer": {"billingAddress": {"countryCode": "BE"}
     		}
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-           //res.render(res, error, sdkResponse);
-	   res.send('The partial URL ' + sdkResponse.partialRedirectUrl);
+    		res.send(res);
 	});
 };
 
