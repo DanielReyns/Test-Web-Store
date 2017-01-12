@@ -40,8 +40,8 @@ exports.cardsingle = function(req, res) {
 		var response = JSON.stringify(sdkResponse.body);
 		var bodyOBJ = JSON.parse(response);
 		var redirectURL = JSON.stringify(bodyOBJ.partialRedirectUrl);
-		res.send("the partial redirect URL is " + redirectURL);
-		//res.send("This is the page for card number " + card_id + " and the URL was " + response.query['partialRedirectUrl']);
+		//res.send("the partial redirect URL is " + redirectURL);
+		res.redirect("https://payment" + redirectURL);
 	});
 	
 };
