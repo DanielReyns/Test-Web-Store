@@ -29,7 +29,7 @@ exports.home = function(req, res) {
 // Card Single
 exports.cardsingle = function(req, res) {
 	//var card_id = req.params.card_id;
-	//res.send("This is the page for card number " + card_id);
+	
 	
 	var body = {
   			"hostedCheckoutSpecificInput": {"locale": "en_GB","variant": "101"}, 
@@ -39,11 +39,8 @@ exports.cardsingle = function(req, res) {
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-		var response = sdkResponse.body;
-		var JSONObj = JSON.parse(response);
-		res.send("Response was :" + JSONObj[0].partialRedirectUrl + "<BR> error was:" + error);
 	});
-	
+	res.send("This is the page for card number " + card_id + " and the response was " + sdkResponse);
 };
 
 // notFound
