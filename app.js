@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 connectSdk.init({
   host: hostname,
   scheme: 'https',
-  port: portnumber,
+  //port: portnumber,
   enableLogging: true, // defaults to false
   //logger: logger, // if undefined console.log will be used
   apiKeyId: 'f76d4db20b15c030',
