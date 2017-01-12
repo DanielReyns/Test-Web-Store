@@ -5,7 +5,7 @@ var portnumber = process.env.PORT || 8080;
 connectSdk.init({
   host: hostname,
   scheme: 'https',
-  port: portnumber,
+  //port: portnumber,
   enableLogging: true, // defaults to false
   //logger: logger, // if undefined console.log will be used
   apiKeyId: 'f76d4db20b15c030',
