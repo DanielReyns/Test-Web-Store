@@ -39,8 +39,9 @@ exports.cardsingle = function(req, res) {
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-    		var Response = JSON.parse(sdkResponse);
-		console.log(Response[0].partialRedirectUrl);
+    		var response = sdkResponse;
+		var jsonObject = JSON.parse(response);
+		console.log(jsonObject[0].partialRedirectUrl);
 		//res.send("Response was :" + body.partialRedirectUrl + "<BR> error was:" + error);
 	});
 };
