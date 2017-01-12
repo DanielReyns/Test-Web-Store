@@ -40,7 +40,7 @@ exports.cardsingle = function(req, res) {
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
     		var Response = JSON.parse(sdkResponse);
-		res.send("Response was :" + Response.partialRedirectUrl + "<BR> error was:" + error);
+		res.send("Response was :" + body.partialRedirectUrl + "<BR> error was:" + error);
 	});
 };
 
