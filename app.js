@@ -31,7 +31,7 @@ app.get('/', routes.home);
 // Card Single
 app.get('/card/:card_id?', routes.cardsingle);
 
-app.get('/finalize/:url?, routes.checkout);
+app.get('/finalize/:url?', routes.checkout);
 
 // notFound
 app.get('*', routes.notfound);
