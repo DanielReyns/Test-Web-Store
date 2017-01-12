@@ -34,7 +34,7 @@ exports.cardsingle = function(req, res) {
 	
 	var body = {
   			"hostedCheckoutSpecificInput": {"locale": "en_GB","variant": "101"}, 
-			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": cards[card_id -1].Price}, 
+			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": cards[card_id -1].Price * 100}, 
     		        "customer": {"billingAddress": {"countryCode": "BE"}
     		}
   		}
