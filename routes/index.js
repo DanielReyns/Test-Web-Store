@@ -38,7 +38,9 @@ exports.cardsingle = function(req, res) {
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
 		var response = JSON.stringify(sdkResponse.body);
-		res.send(response);
+		var bodyOBJ = JSON.parse(response);
+		var redirectURL = JSON.stringify(bodyOBJ.partialRedirectUrl);
+		res.send("the partial redirect URL is " + redirectURL);
 		//res.send("This is the page for card number " + card_id + " and the URL was " + response.query['partialRedirectUrl']);
 	});
 	
