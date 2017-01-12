@@ -39,7 +39,8 @@ exports.cardsingle = function(req, res) {
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
 		var response = JSON.stringify(sdkResponse.body);
 		var bodyOBJ = JSON.parse(response);
-		var redirectURL = JSON.stringify(bodyOBJ.partialRedirectUrl);
+		var rawredirectURL = JSON.stringify(bodyOBJ.partialRedirectUrl);
+		var redirectURL = rawredirectURL.substr(1,rawredirectURL.length-1);
 		//res.send("the partial redirect URL is " + redirectURL);
 		res.redirect("https://payment." + redirectURL);
 	});
