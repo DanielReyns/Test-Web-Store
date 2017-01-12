@@ -1,6 +1,7 @@
 var connectSdk = require('connect-sdk-nodejs');
 var hostname = 'api-sandbox.globalcollect.com';
 var portnumber = process.env.PORT || 8080;
+var subdomain = 'https://payment.';
 
 connectSdk.init({
   host: hostname,
@@ -29,9 +30,11 @@ exports.home = function(req, res) {
 // Card Single
 exports.cardsingle = function(req, res) {
 	var card_id = req.params.card_id;
+	var cards = cardsJSON.cards;
+	
 	var body = {
   			"hostedCheckoutSpecificInput": {"locale": "en_GB","variant": "101"}, 
-			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": 1500}, 
+			"order": {"amountOfMoney": {"currencyCode": "EUR", "amount": cards[card_id -1].Price}, 
     		        "customer": {"billingAddress": {"countryCode": "BE"}
     		}
   		}
@@ -41,10 +44,15 @@ exports.cardsingle = function(req, res) {
 		var bodyOBJ = JSON.parse(response);
 		var rawredirectURL = JSON.stringify(bodyOBJ.partialRedirectUrl);
 		var redirectURL = rawredirectURL.substr(1,rawredirectURL.length-2);
-		//res.send("the partial redirect URL is " + redirectURL);
-		res.redirect("https://payment." + redirectURL);
+		res.redirect(subdomain + redirectURL);
 	});
 	
+};
+
+// finalize transaction
+exports.checkout = function(req, res) {
+	var redirectURL = req.params.url;
+	res.redirect(subdomain + redirectURL);
 };
 
 // notFound
