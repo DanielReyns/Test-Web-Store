@@ -3,63 +3,63 @@
 		"ID" : "1",
 		"Name" : "Wrath of God",
 		"Rarity" : "Rare",
-		"Price" : "7" ,
+		"Price" : 7 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=413580&type=card"
 	},
 	{
 		"ID" : "2",
 		"Name" : "Swords to Plowshares",
 		"Rarity" : "Uncommon",
-		"Price" : "2" ,
+		"Price" : 2 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420695&type=card"
 	},
 	{
 		"ID" : "3",
 		"Name" : "Path to Exile",
 		"Rarity" : "Uncommon",
-		"Price" : "3" ,
+		"Price" : 3 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=382192&type=card"
 	},
 	{
 		"ID" : "4",
 		"Name" : "Merieke Ri Berit",
 		"Rarity" : "Rare",
-		"Price" : "5" ,
+		"Price" : 5 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=108871&type=card"
 	},
 	{
 		"ID" : "5",
 		"Name" : "Freed from the Real",
 		"Rarity" : "Common",
-		"Price" : "1" ,
+		"Price" : 1 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=87336&type=card"
 	},
 	{
 		"ID" : "6",
 		"Name" : "Mikaeus, the Unhallowed",
 		"Rarity" : "Mythic",
-		"Price" : "15" ,
+		"Price" : 15 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=249896&type=card"
 	},
 	{
 		"ID" : "7",
 		"Name" : "Damnation",
 		"Rarity" : "Rare",
-		"Price" : "30" ,
+		"Price" : 30 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=122423&type=card"
 	},
 	{
 		"ID" : "8",
 		"Name" : "Intruder Alarm",
 		"Rarity" : "Rare",
-		"Price" : "10" ,
+		"Price" : 10 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=45258&type=card"
 	},
 	{
 		"ID" : "9",
 		"Name" : "Bloodline Keeper",
 		"Rarity" : "Rare",
-		"Price" : "5" ,
+		"Price" : 5 ,
 		"ImageURL" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=227061&type=card"
 	}
 	]
