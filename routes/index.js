@@ -36,8 +36,22 @@ exports.cardsingle = function(req, res) {
     		}
   		}
 	};
-	var response = connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-		res.send("This is the page for card number " + card_id + " and the URL was " + response.query['partialRedirectUrl']);
+	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
+		var body = '';
+
+    		sdkResponse.on('data', function(chunk){
+        		body += chunk;
+    		});
+
+    		sdkResponse.on('end', function(){
+        		var fbResponse = JSON.parse(body);
+        		res.send("Got a response: ", fbResponse.partialRedirectUrl);
+    		});
+			}).on('error', function(e){
+      		res.send("Got an error: ", e);
+		
+		//var response = JSON.stringify(sdkResponse);
+		//res.send("This is the page for card number " + card_id + " and the URL was " + response.query['partialRedirectUrl']);
 	});
 	
 };
