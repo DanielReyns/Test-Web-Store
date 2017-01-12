@@ -39,7 +39,7 @@ exports.cardsingle = function(req, res) {
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-		console.log(sdkResponse);
+		console.log("The response was:" + sdkResponse);
 		res.send("Response was :" + sdkResponse + "<BR> error was:" + error);
 	});
 	
