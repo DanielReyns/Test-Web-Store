@@ -37,7 +37,7 @@ exports.cardsingle = function(req, res) {
   		}
 	};
 	connectSdk.hostedcheckouts.create("2508", body, null, function (error, sdkResponse) {
-		res.send("This is the page for card number " + card_id + " and the response was " + sdkResponse);
+		res.send("This is the page for card number " + card_id + " and the URL was " + sdkResponse.query['partialRedirectUrl']);
 	});
 	
 };
